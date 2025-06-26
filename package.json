@@ -1,6 +1,6 @@
 {
   "name": "my-dashboard",
-  "homepage": "https://skarrlatina.github.io/dashboard"
+  "homepage": "https://skarrlatina.github.io/dashboard",
   "private": true,
   "version": "0.0.0",
   "type": "module",
