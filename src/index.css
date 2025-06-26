@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-fade-in-up {
+    animation: fadeInUp 0.3s ease-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+}
+
+/* Dark mode styles */
+.dark {
+  --tw-bg-opacity: 1;
+  background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+  color: rgba(243, 244, 246, var(--tw-text-opacity));
+}
+
+.dark .bg-white {
+  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+}
+
+.dark .border-gray-200 {
+  border-color: rgba(55, 65, 81, var(--tw-border-opacity));
+}
+
+.dark .text-gray-500 {
+  color: rgba(156, 163, 175, var(--tw-text-opacity));
+}
+
+/* Add more dark mode overrides as needed */
+
+.select-with-arrow-padding {
+  padding-right: 2.5rem !important;
+}
+
+.custom-select-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.custom-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+}
+.custom-select-arrow {
+  position: absolute;
+  right: 1.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  width: 1.2em;
+  height: 1.2em;
+  display: flex;
+  align-items: center;
+  color: #64748b; /* text-gray-400 */
+}
